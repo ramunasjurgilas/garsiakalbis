@@ -19,6 +19,7 @@
 		00EE0E8E284046B1005786DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		00EE0E90284046B2005786DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00EE0E93284046B2005786DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		00EE0E9C284047AE005786DC /* LTNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = LTNetworking; path = Packages/LTNetworking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 		00EE0E80284046B1005786DC = {
 			isa = PBXGroup;
 			children = (
+				00EE0E9A28404754005786DC /* Packages */,
 				00EE0E8B284046B1005786DC /* Lautsprecher */,
 				00EE0E8A284046B1005786DC /* Products */,
 			);
@@ -65,6 +67,14 @@
 				00EE0E93284046B2005786DC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		00EE0E9A28404754005786DC /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				00EE0E9C284047AE005786DC /* LTNetworking */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
