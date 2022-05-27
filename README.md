@@ -1,5 +1,8 @@
 # Lautsprecher
 
+![Music Albums](Screenshots/screen-1.png?raw=true "Music Albums")
+![Album Artwork](Screenshots/screen-2.png?raw=true "Album Artwork")
+
 - Not needed code in SwiftUI was removed.
 - Introduced state view representation.
 - Introduced protocol ViewStateRepresenter to reduce code duplication.
