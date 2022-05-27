@@ -14,7 +14,8 @@ struct MusicAlbumsListView: View {
     var body: some View {
         List(musicAlbums, id: \.self) { album in
             NavigationLink {
-                Text("dsd")
+                AlbumDetailView(viewModel: AlbumDetailViewModel(url: album.cover))
+                    .navigationTitle(album.album)
             } label: {
                 VStack(alignment: .leading) {
                     HStack {

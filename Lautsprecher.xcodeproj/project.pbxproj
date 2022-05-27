@@ -17,6 +17,9 @@
 		00EE0EAB28407539005786DC /* MusicAlbum+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EAA28407539005786DC /* MusicAlbum+extension.swift */; };
 		00EE0EAD284076B2005786DC /* View+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EAC284076B2005786DC /* View+extension.swift */; };
 		00EE0EC0284078B3005786DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00EE0EBD284078B3005786DC /* Localizable.strings */; };
+		00EE0EC428407C60005786DC /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EC328407C60005786DC /* AlbumDetailView.swift */; };
+		00EE0EC728408C60005786DC /* ViewStateRepresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EC628408C60005786DC /* ViewStateRepresenter.swift */; };
+		00EE0EC928408DB0005786DC /* ViewStateRepresenter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EC828408DB0005786DC /* ViewStateRepresenter+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		00EE0EAC284076B2005786DC /* View+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+extension.swift"; sourceTree = "<group>"; };
 		00EE0EBE284078B3005786DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00EE0EBF284078B3005786DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		00EE0EC328407C60005786DC /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
+		00EE0EC628408C60005786DC /* ViewStateRepresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateRepresenter.swift; sourceTree = "<group>"; };
+		00EE0EC828408DB0005786DC /* ViewStateRepresenter+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewStateRepresenter+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,14 +73,14 @@
 		00EE0E8B284046B1005786DC /* Lautsprecher */ = {
 			isa = PBXGroup;
 			children = (
+				00EE0EC528408C4B005786DC /* Protocols */,
 				00EE0EAE28407848005786DC /* Resources */,
 				00EE0EA82840751D005786DC /* Extensions */,
+				00EE0E92284046B2005786DC /* Preview Content */,
+				00EE0EC128407BD0005786DC /* MusicAlbums */,
+				00EE0EC228407BF3005786DC /* AlbumDetail */,
 				00EE0E8C284046B1005786DC /* LautsprecherApp.swift */,
 				00EE0E90284046B2005786DC /* Assets.xcassets */,
-				00EE0E92284046B2005786DC /* Preview Content */,
-				00EE0EA2284067D0005786DC /* MusicAlbumsViewModel.swift */,
-				00EE0E9D28406152005786DC /* MusicAlbumsScreen.swift */,
-				00EE0EA428406D66005786DC /* MusicAlbumsListView.swift */,
 			);
 			path = Lautsprecher;
 			sourceTree = "<group>";
@@ -107,6 +113,7 @@
 			children = (
 				00EE0EAA28407539005786DC /* MusicAlbum+extension.swift */,
 				00EE0EAC284076B2005786DC /* View+extension.swift */,
+				00EE0EC828408DB0005786DC /* ViewStateRepresenter+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -125,6 +132,32 @@
 				00EE0EBD284078B3005786DC /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		00EE0EC128407BD0005786DC /* MusicAlbums */ = {
+			isa = PBXGroup;
+			children = (
+				00EE0EA2284067D0005786DC /* MusicAlbumsViewModel.swift */,
+				00EE0E9D28406152005786DC /* MusicAlbumsScreen.swift */,
+				00EE0EA428406D66005786DC /* MusicAlbumsListView.swift */,
+			);
+			path = MusicAlbums;
+			sourceTree = "<group>";
+		};
+		00EE0EC228407BF3005786DC /* AlbumDetail */ = {
+			isa = PBXGroup;
+			children = (
+				00EE0EC328407C60005786DC /* AlbumDetailView.swift */,
+			);
+			path = AlbumDetail;
+			sourceTree = "<group>";
+		};
+		00EE0EC528408C4B005786DC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				00EE0EC628408C60005786DC /* ViewStateRepresenter.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,11 +234,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00EE0EC728408C60005786DC /* ViewStateRepresenter.swift in Sources */,
 				00EE0EAB28407539005786DC /* MusicAlbum+extension.swift in Sources */,
 				00EE0E9E28406152005786DC /* MusicAlbumsScreen.swift in Sources */,
+				00EE0EC928408DB0005786DC /* ViewStateRepresenter+extension.swift in Sources */,
 				00EE0EAD284076B2005786DC /* View+extension.swift in Sources */,
 				00EE0EA3284067D0005786DC /* MusicAlbumsViewModel.swift in Sources */,
 				00EE0EA528406D66005786DC /* MusicAlbumsListView.swift in Sources */,
+				00EE0EC428407C60005786DC /* AlbumDetailView.swift in Sources */,
 				00EE0E8D284046B1005786DC /* LautsprecherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

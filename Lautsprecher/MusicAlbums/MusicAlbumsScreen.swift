@@ -14,12 +14,7 @@ struct MusicAlbumsScreen: View {
         Group {
             switch viewModel.viewState {
             case .error(let error):
-                VStack {
-                    Image(systemName: "xmark.octagon")
-                        .resizable()
-                        .frame(width: 200, height: 200)
-                    Text(error.localizedDescription)
-                }
+                viewModel.errorView(systemImageName: "xmark.octagon", errorMessage: error.localizedDescription)
             case .loading:
                 ProgressView()
             case .loaded(let musicAlbums):

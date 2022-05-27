@@ -8,17 +8,12 @@
 import Combine
 import LTNetworking
 
-class MusicAlbumsViewModel: ObservableObject {
-    enum ViewState {
-        case loading
-        case loaded([MusicAlbum])
-        case error(Error)
-    }
-    @Published var viewState: ViewState
+class MusicAlbumsViewModel: ObservableObject, ViewStateRepresenter {
+    @Published var viewState: ViewState<[MusicAlbum]>
     
     private var cancellable = [AnyCancellable]()
     
-    init(viewState: ViewState = .loading) {
+    init(viewState: ViewState<[MusicAlbum]> = .loading) {
         self.viewState = viewState
     }
     
@@ -29,7 +24,7 @@ class MusicAlbumsViewModel: ObservableObject {
             .store(in: &cancellable)
     }
     
-    private func mapViewState(_ result: Result<[MusicAlbum], Error>) -> ViewState {
+    private func mapViewState(_ result: Result<[MusicAlbum], Error>) -> ViewState<[MusicAlbum]> {
         switch result {
         case .success(let musicAlbums):
             return .loaded(musicAlbums)

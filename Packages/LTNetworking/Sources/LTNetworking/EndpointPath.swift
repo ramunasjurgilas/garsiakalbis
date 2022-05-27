@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 enum EndpointPath: String {
+    case base = "/"
     case musicAlbums = "/music-albums.json"
-    case coreArtUrl = "/cover-art-url"
     
     func url() -> URL {
         #warning("This url must be retrieved from preference file or injected from the main app module.")
@@ -43,6 +43,17 @@ extension Endpoint {
             })
             .print()
             .eraseToAnyPublisher()
+    }
+    
+    func download() -> AnyPublisher<Result<Data, Error>, Never> {
+        urlSession
+            .dataTaskPublisher(for: url)
+            .map(\.data)
+            .map { Result.success($0) }
+            .catch( { error in
+                Just(.failure(error))
+            })
+                .eraseToAnyPublisher()
     }
 }
 
