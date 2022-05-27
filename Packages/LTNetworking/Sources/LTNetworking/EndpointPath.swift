@@ -30,11 +30,29 @@ extension Endpoint {
         return result
     }
     
-    func exe<T>(type: T.Type) -> AnyPublisher<T, Error> where T: Decodable {
+    func exe<T>(type: T.Type) -> AnyPublisher<Result<T, Error>, Never> where T: Decodable {
         urlSession
             .dataTaskPublisher(for: reqeust())
             .map(\.data)
             .decode(type: T.self, decoder: JSONDecoder())
+            .map({ d in
+                Result.success(d)
+            })
+            .catch({ error in
+                Just(.failure(error))
+            })
+            .print()
             .eraseToAnyPublisher()
     }
+}
+
+extension Publisher {
+  func asResult() -> AnyPublisher<Result<Output, Failure>, Never> {
+    self
+      .map(Result.success)
+      .catch { error in
+        Just(.failure(error))
+      }
+      .eraseToAnyPublisher()
+  }
 }
