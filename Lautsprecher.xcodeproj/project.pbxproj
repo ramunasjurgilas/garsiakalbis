@@ -75,10 +75,10 @@
 		00EE0E8B284046B1005786DC /* Lautsprecher */ = {
 			isa = PBXGroup;
 			children = (
+				00EE0E92284046B2005786DC /* Preview Content */,
 				00EE0EC528408C4B005786DC /* Protocols */,
 				00EE0EAE28407848005786DC /* Resources */,
 				00EE0EA82840751D005786DC /* Extensions */,
-				00EE0E92284046B2005786DC /* Preview Content */,
 				00EE0EC128407BD0005786DC /* MusicAlbums */,
 				00EE0EC228407BF3005786DC /* AlbumDetail */,
 				00EE0E8C284046B1005786DC /* LautsprecherApp.swift */,

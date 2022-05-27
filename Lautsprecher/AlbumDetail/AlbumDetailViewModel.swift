@@ -27,13 +27,4 @@ class AlbumDetailViewModel: ObservableObject, ViewStateRepresenter {
             .assign(to: \.viewState, on: self)
             .store(in: &cancellable)
     }
-    
-    private func mapViewState(_ result: Result<Image, Error>) -> ViewState<Image> {
-        switch result {
-        case .success(let image):
-            return .loaded(image)
-        case .failure(let error):
-            return .error(error)
-        }
-    }
 }

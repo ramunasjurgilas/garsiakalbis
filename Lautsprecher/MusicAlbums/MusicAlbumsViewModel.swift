@@ -23,13 +23,4 @@ class MusicAlbumsViewModel: ObservableObject, ViewStateRepresenter {
             .assign(to: \.viewState, on: self)
             .store(in: &cancellable)
     }
-    
-    private func mapViewState(_ result: Result<[MusicAlbum], Error>) -> ViewState<[MusicAlbum]> {
-        switch result {
-        case .success(let musicAlbums):
-            return .loaded(musicAlbums)
-        case .failure(let error):
-            return .error(error)
-        }
-    }
 }
