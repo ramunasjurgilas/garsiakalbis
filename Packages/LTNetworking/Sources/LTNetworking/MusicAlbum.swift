@@ -8,7 +8,21 @@
 import Foundation
 
 public struct MusicAlbum: Decodable {
-    let album: String
-    let artist: String
-    let cover: URL
+    public let album: String
+    public let artist: String
+    public let cover: URL
+    public let id: String
+    
+    public init(
+        album: String,
+        artist: String,
+        cover: URL,
+        id: String
+    ) {
+        self.album = album
+        self.artist = artist
+        self.cover = cover
+        self.id = id
+    }
 }
+

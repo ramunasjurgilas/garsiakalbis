@@ -8,23 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		00EE0E8D284046B1005786DC /* LautsprecherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0E8C284046B1005786DC /* LautsprecherApp.swift */; };
-		00EE0E8F284046B1005786DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0E8E284046B1005786DC /* ContentView.swift */; };
 		00EE0E91284046B2005786DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00EE0E90284046B2005786DC /* Assets.xcassets */; };
 		00EE0E94284046B2005786DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00EE0E93284046B2005786DC /* Preview Assets.xcassets */; };
-		00EE0E9E28406152005786DC /* MusicAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0E9D28406152005786DC /* MusicAlbums.swift */; };
+		00EE0E9E28406152005786DC /* MusicAlbumsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0E9D28406152005786DC /* MusicAlbumsScreen.swift */; };
 		00EE0EA128406213005786DC /* LTNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 00EE0EA028406213005786DC /* LTNetworking */; };
 		00EE0EA3284067D0005786DC /* MusicAlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EA2284067D0005786DC /* MusicAlbumsViewModel.swift */; };
+		00EE0EA528406D66005786DC /* MusicAlbumsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EA428406D66005786DC /* MusicAlbumsListView.swift */; };
+		00EE0EAB28407539005786DC /* MusicAlbum+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EAA28407539005786DC /* MusicAlbum+extension.swift */; };
+		00EE0EAD284076B2005786DC /* View+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EAC284076B2005786DC /* View+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00EE0E89284046B1005786DC /* Lautsprecher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lautsprecher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00EE0E8C284046B1005786DC /* LautsprecherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LautsprecherApp.swift; sourceTree = "<group>"; };
-		00EE0E8E284046B1005786DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		00EE0E90284046B2005786DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00EE0E93284046B2005786DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00EE0E9C284047AE005786DC /* LTNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = LTNetworking; path = Packages/LTNetworking; sourceTree = "<group>"; };
-		00EE0E9D28406152005786DC /* MusicAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAlbums.swift; sourceTree = "<group>"; };
+		00EE0E9D28406152005786DC /* MusicAlbumsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAlbumsScreen.swift; sourceTree = "<group>"; };
 		00EE0EA2284067D0005786DC /* MusicAlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAlbumsViewModel.swift; sourceTree = "<group>"; };
+		00EE0EA428406D66005786DC /* MusicAlbumsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAlbumsListView.swift; sourceTree = "<group>"; };
+		00EE0EAA28407539005786DC /* MusicAlbum+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MusicAlbum+extension.swift"; sourceTree = "<group>"; };
+		00EE0EAC284076B2005786DC /* View+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +64,13 @@
 		00EE0E8B284046B1005786DC /* Lautsprecher */ = {
 			isa = PBXGroup;
 			children = (
+				00EE0EA82840751D005786DC /* Extensions */,
 				00EE0E8C284046B1005786DC /* LautsprecherApp.swift */,
-				00EE0E8E284046B1005786DC /* ContentView.swift */,
-				00EE0E9D28406152005786DC /* MusicAlbums.swift */,
 				00EE0E90284046B2005786DC /* Assets.xcassets */,
 				00EE0E92284046B2005786DC /* Preview Content */,
 				00EE0EA2284067D0005786DC /* MusicAlbumsViewModel.swift */,
+				00EE0E9D28406152005786DC /* MusicAlbumsScreen.swift */,
+				00EE0EA428406D66005786DC /* MusicAlbumsListView.swift */,
 			);
 			path = Lautsprecher;
 			sourceTree = "<group>";
@@ -91,6 +96,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		00EE0EA82840751D005786DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00EE0EAA28407539005786DC /* MusicAlbum+extension.swift */,
+				00EE0EAC284076B2005786DC /* View+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00EE0E9E28406152005786DC /* MusicAlbums.swift in Sources */,
-				00EE0E8F284046B1005786DC /* ContentView.swift in Sources */,
+				00EE0EAB28407539005786DC /* MusicAlbum+extension.swift in Sources */,
+				00EE0E9E28406152005786DC /* MusicAlbumsScreen.swift in Sources */,
+				00EE0EAD284076B2005786DC /* View+extension.swift in Sources */,
 				00EE0EA3284067D0005786DC /* MusicAlbumsViewModel.swift in Sources */,
+				00EE0EA528406D66005786DC /* MusicAlbumsListView.swift in Sources */,
 				00EE0E8D284046B1005786DC /* LautsprecherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

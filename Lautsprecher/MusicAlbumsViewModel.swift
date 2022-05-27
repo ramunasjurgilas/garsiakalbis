@@ -14,9 +14,13 @@ class MusicAlbumsViewModel: ObservableObject {
         case loaded([MusicAlbum])
         case error(Error)
     }
-    @Published var viewState = ViewState.loading
+    @Published var viewState: ViewState
     
     private var cancellable = [AnyCancellable]()
+    
+    init(viewState: ViewState = .loading) {
+        self.viewState = viewState
+    }
     
     func fetchMusicAlbums() {
         GetMusicAlbumsRequest().exe()

@@ -11,7 +11,7 @@ import SwiftUI
 struct LautsprecherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MusicAlbumsScreen(viewModel: MusicAlbumsViewModel())
         }
     }
 }
