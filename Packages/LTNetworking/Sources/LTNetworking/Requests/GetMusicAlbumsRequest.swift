@@ -8,14 +8,14 @@
 import Foundation
 import Combine
 
-struct GetMusicAlbumsRequest: Endpoint {
+public struct GetMusicAlbumsRequest: Endpoint {
     var url: URL { path.url() }
     
     var httpMethod: String = "GET"
     var urlSession: URLSession
     var path: EndpointPath = .musicAlbums
     
-    init(urlSession: URLSession = .shared) {
+    public init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
     }
     
@@ -23,7 +23,7 @@ struct GetMusicAlbumsRequest: Endpoint {
         nil
     }
     
-    func exe() -> AnyPublisher<Result<[MusicAlbum], Error>, Never> {
+    public func exe() -> AnyPublisher<Result<[MusicAlbum], Error>, Never> {
         exe(type: [MusicAlbum].self)
             .eraseToAnyPublisher()
     }

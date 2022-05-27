@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MusicAlbum: Decodable {
+public struct MusicAlbum: Decodable {
     let album: String
     let artist: String
     let cover: URL
