@@ -22,7 +22,7 @@ class AlbumDetailViewModel: ObservableObject, ViewStateRepresenter {
     }
     
     func getCoverArt() {
-        GetCoverArtDetail(url: url!).exe()
+        GetCoverArtRequest(url: url!).exe()
             .map { self.mapViewState($0) }
             .assign(to: \.viewState, on: self)
             .store(in: &cancellable)

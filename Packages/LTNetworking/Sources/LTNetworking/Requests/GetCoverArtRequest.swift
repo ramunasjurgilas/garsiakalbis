@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import SwiftUI
 
-public struct GetCoverArtDetail: Endpoint {
+public struct GetCoverArtRequest: Endpoint {
     enum DetailError: Error {
         case canNotCreateImage
     }
