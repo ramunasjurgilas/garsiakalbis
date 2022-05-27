@@ -20,6 +20,7 @@
 		00EE0EC428407C60005786DC /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EC328407C60005786DC /* AlbumDetailView.swift */; };
 		00EE0EC728408C60005786DC /* ViewStateRepresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EC628408C60005786DC /* ViewStateRepresenter.swift */; };
 		00EE0EC928408DB0005786DC /* ViewStateRepresenter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0EC828408DB0005786DC /* ViewStateRepresenter+extension.swift */; };
+		00EE0ECB284093F2005786DC /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE0ECA284093F2005786DC /* AlbumDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		00EE0EC328407C60005786DC /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 		00EE0EC628408C60005786DC /* ViewStateRepresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateRepresenter.swift; sourceTree = "<group>"; };
 		00EE0EC828408DB0005786DC /* ViewStateRepresenter+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewStateRepresenter+extension.swift"; sourceTree = "<group>"; };
+		00EE0ECA284093F2005786DC /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				00EE0EC328407C60005786DC /* AlbumDetailView.swift */,
+				00EE0ECA284093F2005786DC /* AlbumDetailViewModel.swift */,
 			);
 			path = AlbumDetail;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				00EE0EA528406D66005786DC /* MusicAlbumsListView.swift in Sources */,
 				00EE0EC428407C60005786DC /* AlbumDetailView.swift in Sources */,
 				00EE0E8D284046B1005786DC /* LautsprecherApp.swift in Sources */,
+				00EE0ECB284093F2005786DC /* AlbumDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
