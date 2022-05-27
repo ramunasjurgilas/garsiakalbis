@@ -24,7 +24,16 @@ struct MusicAlbumsScreen: View {
                 ProgressView()
             case .loaded(let musicAlbums):
                 MusicAlbumsListView(musicAlbums: musicAlbums)
-                    .navigationTitle("KO")
+                    .navigationTitle("title-music-albums")
+                    .toolbar(content: {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button {
+                                #warning("Implement add album.")
+                            } label: {
+                                Image(systemName: "plus")
+                            }
+                        }
+                    })
                     .embedInNavigationView()
             }
         }

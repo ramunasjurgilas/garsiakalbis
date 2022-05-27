@@ -18,12 +18,12 @@ struct MusicAlbumsListView: View {
             } label: {
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("Artist: ")
+                        Text("text-artist")
                         Text(album.artist)
                     }
                     .font(.headline)
                     HStack {
-                        Text("Album: ")
+                        Text("text-album")
                         Text(album.album)
                         .font(.subheadline) }
                 }
