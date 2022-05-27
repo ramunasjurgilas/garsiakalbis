@@ -1,6 +1,6 @@
 # Lautsprecher
 
-![Music Albums](Screenshots/screen-1.png?raw=true "Music Albums")
+![Music Albums](Screenshots/screen-1.png?width=100px "Music Albums")
 ![Album Artwork](Screenshots/screen-2.png?raw=true "Album Artwork")
 
 - Not needed code in SwiftUI was removed.
